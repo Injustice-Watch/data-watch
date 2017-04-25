@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block mainbar %}
+
+
+	<!--title-->
+	<div class="headline">{{ title }}</div>
+	<!--byline-->
+	<div class="byline">By <a href="{{ bylineLink }}" target="_blank">{{ byline }}</a> </div>
+	<!--dateline-->
+	<div class="dateline">{{ date }}</div>
+	<!--body-->
+	<div class="body-text">
+		<p>Text goes here.</p>
+		
+	</div>
+	
+		<div class="gfx" >
+			<iframe src="graphic-01/index.html" scrolling=no width="100%" height=500 frameborder="0"></iframe>
+		</div>
+		
+		<div class="body-text">
+		
+		<p class="signoff">
+		<img src="assets/github-icon.png" id="github-icon"><a href="{{ githubRepo }}">Find the dataset and our code for analyzing and visualizing it on our GitHub.</a>
+		</p>
+	</div>
+{% endblock %}
