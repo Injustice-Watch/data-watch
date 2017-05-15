@@ -1,13 +1,13 @@
 {% set title = 'Set title' %}
-{% set keywords = 'set keywords'%}
+{% set keywords = ''%}
 {% set metaImage = '' %}
 {% set description = '' %}
 {% set byline = 'Set byline' %}
 {% set bylineLink = '' %}
-{% set date = 'set date' %}
-{% set deployUrl = 'set deploy URL ' %}
+{% set date = 'Set date' %}
+{% set deployUrl = '' %}
 {% set githubRepo = 'https://github.com/Injustice-Watch/' %}
-
+<html>
 <head>
 <!--meta-->
 <title>{{ title }}</title>
@@ -23,6 +23,7 @@
 <meta property="og:image"              content="{{ metaImage }}" />
 
 <link rel='stylesheet' type='text/css' href='css/main.css'>
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:900,900i" rel="stylesheet">
 <script src="https://use.typekit.net/fhr0vwf.js"></script>
 <!--analytics-->
 <script>
@@ -46,11 +47,47 @@
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-
-
+<!--graphics styles-->
+<style>
+	.flexes{
+		align-items:center;
+		flex-wrap:wrap;
+		display:flex;
+	}
+	
+	.dist-title{
+		font-family:'Proxima Nova',sans-serif;
+		font-size:20px;
+	}
+	.number-explainer{
+		font-family:'Proxima Nova',sans-serif;
+		font-size:15px;
+	}
+	.budge-divs{
+		font-family:'Proxima Nova',sans-serif;
+		font-size:15px;
+		justify-content:space-around;
+	}
+	@media only screen and (max-width: 400px){
+		.flexes{
+			display:block;
+		}
+		
+		.state-picture{
+		width:100%;
+		}
+		.vertical-flex{
+		width:100% !important;
+		}
+	}
+</style>
 <!--navigation-->
 <div class="nav">
-	<a href="http://injusticewatch.org"><img src="assets/banner.png" class="banner"></a><span class="banner-text"> | Data</span><div class="right-float-banner"><span class="donate"><a href="http://www.injusticewatch.org/donate/">Donate</a></span><a href="http://www.facebook.com/sharer/sharer.php?u={{ deployUrl }}&title={{ title }}
+	<div style="height:100%; display:flex; display:webkit-flex; align-items:center; width:40%;">
+	<a href="http://injusticewatch.org"><img src="assets/banner.png" class="banner"></a><span class="banner-text"> | Data</span>
+	</div>
+	
+	<div class="right-float-banner"><span class="donate"><a href="http://www.injusticewatch.org/donate/">Donate</a></span><a href="http://www.facebook.com/sharer/sharer.php?u={{ deployUrl }}&title={{ title }}
 " target="_blank"><img src="assets/facebook.png" class="social-icon" id="shareBtn"></a><a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={{ deployUrl }}" target="_blank"><img src="assets/twitter-icon.png" class="social-icon"></a></div>
 </div>
 
@@ -77,9 +114,12 @@
 
 <!--pym-->
 <script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
-<script>
+<!--<script>
     var pymParent = new pym.Parent('graphic-01', 'graphic-01/index.html', {});
-</script>
+</script>-->
+<script src='js/d3.min.js'></script>
+<script src='js/index.js'></script>
 
 </body>
 </head>
+</html>

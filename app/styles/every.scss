@@ -1,11 +1,13 @@
 $desktop-width:734px;
-
+$mobile-approach:400px;
+$nav-height:40px;
 @mixin responsive-body{
 	@media only screen and (max-width: $desktop-width){
 		width:90%;
 		margin-left:5%;
 	}
 }
+
 a:link, a:visited,a:hover, a:active  {
   		text-decoration: none; color: inherit;
   		cursor:pointer;
@@ -14,7 +16,7 @@ body{
 	overflow-x:hidden;
 }
 .nav{
-	height:35px;
+	height:$nav-height;
 	top:0;
 	width:110%;
 	background-color:#fafafa ;
@@ -25,10 +27,17 @@ body{
 	border-bottom-width:1px;
 	border-bottom-color:#d3d3d3;
 	border-bottom-style:dotted;
+	border-top-width:1px;
+	border-top-color:#d3d3d3;
+	border-top-style:dotted;
+	position:fixed;
+	display:flex;
+	display:-webkit-flex;
+	justify-content:space-between;
+	-webkit-justify-content:space-between;
 }
 .banner{
 	height:30px;
-    vertical-align: middle;
     @media only screen and (max-width: $desktop-width){
 		height:20px;
 		margin-top:5px;
@@ -37,10 +46,9 @@ body{
 .banner-text{
 	color:rgb(26,37,38);
 	text-transform:uppercase;
-	font-family:'Proxima Nova','sans-serif';
+	font-family:'Proxima Nova',sans-serif;
 	font-weight:300;
 	font-size:15px;
-    vertical-align: middle;
     @media only screen and (max-width: $desktop-width){
 		
 		margin-top:15px;
@@ -48,9 +56,9 @@ body{
 }
 .right-float-banner{
 	float:right;
-	margin-right:15%;
+	margin-right:10%;
 	vertical-align:middle;
-	margin-top:3px;
+	margin-top:10px;
 }
 .donate{
 	color:#fafafa;
@@ -58,7 +66,7 @@ body{
 	border-radius:3px;
 	padding:3px;
 	text-transform:uppercase;
-	font-family:'Proxima Nova','sans-serif';
+	font-family:'Proxima Nova',sans-serif;
 	font-weight:700;
 	font-size:15px;
     vertical-align: middle;
@@ -74,7 +82,7 @@ body{
 	opacity:.7;
 }
 .mainbar{
-	margin-top:10px;
+	margin-top:$nav-height;
 }
 .headline{
 	font-size:55px;
@@ -83,6 +91,9 @@ body{
 	width:734px;
 	margin:auto;
 	@include responsive-body;
+	@media only screen and (max-width: $mobile-approach){
+		font-size: 30px;
+	}
 }
 .byline{
 	font-size:15px;

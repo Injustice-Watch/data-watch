@@ -58,24 +58,27 @@ gulp.task('numbers2',function(){
 gulp.task('d3',function(){
 
 	return gulp.src('node_modules/d3/build/d3.min.js')
-	.pipe(gulp.dest('dist/js'));
+	.pipe(gulp.dest('app/js'));
 	
 });
 
 gulp.task('lodash',function(){
 	
 	return gulp.src('node_modules/lodash/lodash.min.js')
-	.pipe(gulp.dest('dist/js'));
+	.pipe(gulp.dest('app/js'));
 	
 });
 
 gulp.task('jquery',function(){
 
 	return gulp.src('node_modules/jquery/dist/jquery.min.js')
-	.pipe(gulp.dest('dist/js'));
+	.pipe(gulp.dest('app/js'));
 
 });
-
+gulp.task('js',function(){
+	return gulp.src('app/js/*')
+	.pipe(gulp.dest('dist/js'));
+});
 gulp.task('dependencies',['d3','lodash','jquery'],function(){
 
 }); 
@@ -95,7 +98,7 @@ gulp.task('graphic-02',function(){
 	.pipe(gulp.dest('dist/graphic-02'));
 	
 });
-gulp.task('build',['sass','assets','styles','numbers1','numbers2','dependencies','nunjucks', 'graphic-01','graphic-02'],function(){
+gulp.task('build',['sass','assets','styles','numbers1','numbers2','dependencies','js','nunjucks', 'graphic-01','graphic-02'],function(){
 	return gulp.src('app/index.html')
 	.pipe(gulp.dest('dist'))
 });
@@ -108,7 +111,7 @@ gulp.task('browserSync', function(){
 	})
 });
 
-gulp.task('watch',['browserSync', 'nunjucks','sass'],function(){
+gulp.task('watch',['sass','nunjucks','browserSync'],function(){
 	gulp.watch('app/styles/**/*.scss', ['sass']);
 	gulp.watch('app/templates/*.html', browserSync.reload);
 	gulp.watch('app/js/**/*.js',browserSync.reload);

@@ -7,22 +7,23 @@
 
 
 
-
+<html>
 <head>
 <!--meta-->
-<title>Set title</title>
+<title>Federal gun prosecutions in Chicago region lag despite shooting epidemic</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="keywords" content="set keywords">
-<meta name="description" content="">
+<meta name="keywords" content="guns, firearms, prosecutions">
+<meta name="description" content="An Injustice Watch analysis shows the U.S. Attorney for the Northern District of Illinois prosecuted far fewer gun crimes than comparable districts.">
 
 <!--facebook meta-->
-<meta property="og:url"                content="set deploy URL " />
+<meta property="og:url"                content="http://injusticewatch.org/interactives/gun-crimes " />
 <meta property="og:type"               content="article" />
-<meta property="og:title"              content="Set title" />
-<meta property="og:description"        content="" />
-<meta property="og:image"              content="" />
+<meta property="og:title"              content="Federal gun prosecutions in Chicago region lag despite shooting epidemic" />
+<meta property="og:description"        content="An Injustice Watch analysis shows the U.S. Attorney for the Northern District of Illinois prosecuted far fewer gun crimes than comparable districts." />
+<meta property="og:image"              content="http://www.injusticewatch.org/wp-content/uploads/2017/05/gun.png" />
 
 <link rel='stylesheet' type='text/css' href='css/main.css'>
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:900,900i" rel="stylesheet">
 <script src="https://use.typekit.net/fhr0vwf.js"></script>
 <!--analytics-->
 <script>
@@ -46,12 +47,48 @@
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-
-
+<!--graphics styles-->
+<style>
+	.flexes{
+		align-items:center;
+		flex-wrap:wrap;
+		display:flex;
+	}
+	
+	.dist-title{
+		font-family:'Proxima Nova',sans-serif;
+		font-size:20px;
+	}
+	.number-explainer{
+		font-family:'Proxima Nova',sans-serif;
+		font-size:15px;
+	}
+	.budge-divs{
+		font-family:'Proxima Nova',sans-serif;
+		font-size:15px;
+		justify-content:space-around;
+	}
+	@media only screen and (max-width: 400px){
+		.flexes{
+			display:block;
+		}
+		
+		.state-picture{
+		width:100%;
+		}
+		.vertical-flex{
+		width:100% !important;
+		}
+	}
+</style>
 <!--navigation-->
 <div class="nav">
-	<a href="http://injusticewatch.org"><img src="assets/banner.png" class="banner"></a><span class="banner-text"> | Data</span><div class="right-float-banner"><span class="donate"><a href="http://www.injusticewatch.org/donate/">Donate</a></span><a href="http://www.facebook.com/sharer/sharer.php?u=set deploy URL &title=Set title
-" target="_blank"><img src="assets/facebook.png" class="social-icon" id="shareBtn"></a><a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=set deploy URL " target="_blank"><img src="assets/twitter-icon.png" class="social-icon"></a></div>
+	<div style="height:100%; display:flex; display:webkit-flex; align-items:center; width:40%;">
+	<a href="http://injusticewatch.org"><img src="assets/banner.png" class="banner"></a><span class="banner-text"> | Data</span>
+	</div>
+	
+	<div class="right-float-banner"><span class="donate"><a href="http://www.injusticewatch.org/donate/">Donate</a></span><a href="http://www.facebook.com/sharer/sharer.php?u=http://injusticewatch.org/interactives/gun-crimes &title=Federal gun prosecutions in Chicago region lag despite shooting epidemic
+" target="_blank"><img src="assets/facebook.png" class="social-icon" id="shareBtn"></a><a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=http://injusticewatch.org/interactives/gun-crimes " target="_blank"><img src="assets/twitter-icon.png" class="social-icon"></a></div>
 </div>
 
 <!--feed body text from template-->	
@@ -60,11 +97,11 @@
 
 
 	<!--title-->
-	<div class="headline">Set title</div>
+	<div class="headline">Federal gun prosecutions in Chicago region lag despite shooting epidemic</div>
 	<!--byline-->
-	<div class="byline">By <a href="" target="_blank">Set byline</a> </div>
+	<div class="byline">By <a href="http://www.injusticewatch.org/author/swhart/" target="_blank">Sam Hart</a> </div>
 	<!--dateline-->
-	<div class="dateline">set date</div>
+	<div class="dateline">May 1, 2017</div>
 	<!--body-->
 	<div class="body-text">
 		<p>Text goes here.</p>
@@ -86,7 +123,7 @@
 <!--facebook comments-->
 <div class="comments-wrapper">
 	
-	<div class="fb-comments" data-href="set deploy URL " data-numposts="5" data-width=500>
+	<div class="fb-comments" data-href="http://injusticewatch.org/interactives/gun-crimes " data-numposts="5" data-width=500>
 	
 	</div>
 	
@@ -102,9 +139,12 @@
 
 <!--pym-->
 <script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
-<script>
+<!--<script>
     var pymParent = new pym.Parent('graphic-01', 'graphic-01/index.html', {});
-</script>
+</script>-->
+<script src='js/d3.min.js'></script>
+<script src='js/index.js'></script>
 
 </body>
 </head>
+</html>
